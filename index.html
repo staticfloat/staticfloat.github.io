@@ -1,3 +1,144 @@
-<html>
-Hello, world!
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Elliot Saba, personal website">
+    <meta name="author" content="Elliot Saba">
+
+    <title>Elliot Saba, personal website</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <style>
+        body {
+          min-height: 1000px;
+        }
+
+        .bodytron {
+          background-color: #eee;
+          font-size: 16px;
+          font-weight: 200;
+          border: 0px;
+        }
+
+        .navbar-static-top {
+          margin-bottom: 19px;
+        }
+    </style>
+  </head>
+  <body>
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <span class="navbar-brand">Elliot Saba</span>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#_about" role="tab" data-toggle="tab">About</a></li>
+            <li><a href="#_projects" role="tab" data-toggle="tab">Projects</a></li>
+            <li><a href="#_contact" role="tab" data-toggle="tab">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container tab-content">
+      <!-- Main component for a primary marketing message or call to action -->
+      <div role="tabpanel" class="tab-pane active" id="_about">
+        <div class="jumbotron">
+          <h1>About me</h1>
+          <div class="media">
+            <div class="media-body">
+              <p>I am a Ph.D. student at the <a href="https://uw.edu">University of Washington</a>, studying Electrical Engineering, specifically Digital Signal Processing.  I specialize in signal-level analysis of systems both natural and artificial.  I also have experience in a number of related fields including low-level microcontroller programming, high performance computing, machine learning, web application development and realtime graphics/interactive simulation.</p>
+            </div>
+            <div class="media-right">
+              <img class="media=object" src="img/mugshot.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default panel-body bodytron">
+          <p>I graduated from the University of Washington with a Bachelors of Science in Electrical Engineering in 2011, and continued on directly into the graduate program, earning my Masters degree in 2014 from <a href="https://www.ee.washington.edu/faculty/atlas/">Prof. Les Eugene Atlas</a> and <a href="https://faculty.washington.edu/akclee/">Prof. Adrian KC Lee</a>.  My masters thesis was titled "<a href="papers/ElliotSaba_MastersThesis.pdf">A Fresh Look at Functional Connectivity</a>" and proposed a new application of pre-existing mathematics toward analysis of neuroimaging signals such as those captured by electro- and magnetoencephalographic (EEG/MEG) systems.</p>
+
+          <p>I am currently a student in the <a href="https://ubicomplab.cs.washington.edu">Ubiquitous Computing Laboratory</a> under <a href="https://abstract.cs.washington.edu/~shwetak">Prof. Shwetak Patel</a>. My <a data-toggle="tab" href="#_projects">projects page</a> has current information on any work currently underway, whereas my <a href="papers/ElliotSaba_CV.pdf">curriculum vitae</a> has a more targeted selection of previous work to peruse.</p>
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="_projects">
+        <div class="panel panel-default panel-body bodytron">
+          <h1>Projects, past and present</h1>
+          <p>Gathered here are some particularly interesting projects I have worked on.</p>
+        </div>
+        <div class="panel panel-default panel-body bodytron">
+          <h1>Current Projects</h1>
+          <div class="media">
+            <h4>The <a href="https://julialang.org">Julia Language</a></h4>
+            <div class="media-body">
+              
+              <p>I have been a core developer on the Julia language project since 2013, a new programming language currently on the rise in the field of technical computing.  My contributions to the project include <a href="http://julialang.org/downloads/">release maintenance, testing and packaging</a>, design and implementation of the <a href="https://github.com/JuliaLang/Homebrew.jl">official OS X package binary deployment system</a>, development of packages critical to the Julia package ecosystem such as <a href="https://github.com/staticfloat/Nettle.jl">Nettle.jl</a> and <a href="https://github.com/staticfloat/SHA.jl">SHA.jl</a>, as well as innumerable bug fixes and bits of code scattered throughout the project and related efforts. </p>
+            </div>
+            <div class="media-right">
+              <a href="https://julialang.org">
+                <img class="media=object" style="width:150px" src="img/julia.png">
+              </a>
+            </div>
+          </div>
+
+          <div class="media">
+            <h4>WiBreathe</h4>
+            <div class="media-left">
+              <a href="https://ubicomplab.cs.washington.edu/projects">
+                <img class="media=object" style="width:150px" src="img/julia.png">
+              </a>
+            </div>
+            <div class="media-body">
+              <p>TBA</p>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default panel-body bodytron">
+          <h1>Past Projects</h1>
+
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="_contact">
+        <div class="jumbotron">
+          <p>Email: sabae (at) uw (dot) edu</p>
+          <p>Leave a voicemail at +1 (206) 414-8216</p>
+          <p>Find me on <a href="https://github.com/staticfloat">Github</a> or <a href="https://stackoverflow.com/users/230778/staticfloat">Stack Overflow</a>. </p>
+        </div>
+      </div>
+    </div> <!-- /container -->
+
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script language="javascript">
+      $(document).ready(function() {
+
+        // When we show a tab, set the window.location.hash appropriately,
+        // but don't let it scroll us around
+        $('a[data-toggle="tab"]').on("shown.bs.tab", function(e) {
+          window.location.hash = $(e.target).attr("href").substring(2)
+          window.scrollTo(0, 0)
+        })
+
+        // Show the tab we've currently got active
+        $("a[href='#_" + window.location.hash.substring(1) + "']").tab('show')
+      })
+    </script>
+  </body>
 </html>
