@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <script type="text/javascript">
-      if( window.location.protocol != "https:" )
+      if( window.location.protocol != "https:" && window.location.hostname != "localhost" )
         window.location.protocol = "https:";
     </script>
     <meta name="description" content="Elliot Saba, personal website">
@@ -79,10 +79,6 @@
 
       <div role="tabpanel" class="tab-pane" id="_projects">
         <div class="panel panel-default panel-body bodytron">
-          <h1>Projects, past and present</h1>
-          <p>Gathered here are some particularly interesting projects I have worked on.</p>
-        </div>
-        <div class="panel panel-default panel-body bodytron">
           <h1>Current Projects</h1>
           <div class="media">
             <h4>The <a href="https://julialang.org">Julia Language</a></h4>
@@ -97,14 +93,14 @@
           </div>
 
           <div class="media">
-            <h4><a href="https://ubicomplab.cs.washington.edu/projects">WiBreathe</a></h4>
+            <h4><a href="https://ubicomplab.cs.washington.edu/projects/WiBreathe">WiBreathe</a></h4>
             <div class="media-left">
-              <a href="https://ubicomplab.cs.washington.edu/projects">
-                <img class="media=object" style="width:150px" src="img/julia.png">
+              <a href="https://ubicomplab.cs.washington.edu/projects/WiBreathe">
+                <img class="media=object" style="width:180px" src="img/wibreathe.png">
               </a>
             </div>
             <div class="media-body">
-              <p><a href="https://ubicomplab.cs.washington.edu/projects">WiBreathe</a> is a research project at the University of Washington Ubiquitous Computing Laboratory on remote health sensing via a system that utilizes 2.4 GHz electromagnetic signals to determine patient vital statistics such as breathing rate. This work was published at PerCom 2015 in a paper titled "<a href="papers/WiBreathe_PerCom2015.pdf">WiBreathe: Estimating Respiration Rate Using Wireless Signals in Natural Settings in the Home</a>".  My main contribution was in the design and implementation of signal processing algorithms to map the received wireless signals to breathing rates. We are now extending this work to utilize pre-existing signals and wireless infrastructure, which has given me reason to build an 802.11b software decoder from scratch.</p>
+              <p><a href="https://ubicomplab.cs.washington.edu/projects/WiBreathe">WiBreathe</a> is a research project at the University of Washington Ubiquitous Computing Laboratory on remote health sensing via a system that utilizes 2.4 GHz electromagnetic signals to determine patient vital statistics such as breathing rate. This work was published at <a href="https://www.percom.org/">PerCom</a> 2015 in a paper titled "<a href="papers/WiBreathe_PerCom2015.pdf">WiBreathe: Estimating Respiration Rate Using Wireless Signals in Natural Settings in the Home</a>".  My main contribution was in the design and implementation of signal processing algorithms to map the received wireless signals to breathing rates. We are now extending this work to utilize pre-existing signals and wireless infrastructure, which has given me reason to build an 802.11b software decoder from scratch.</p>
             </div>
           </div>
 
@@ -123,14 +119,14 @@
         <div class="panel panel-default panel-body bodytron">
           <h1>Past Projects</h1>
           <div class="media">
-            <h4><a href="https://ubicomplab.cs.washington.edu/projects">Functional Connectivity Modeling</a></h4>
+            <h4>Modeling Functional Connectivity in the brain</h4>
             <div class="media-left">
               <a href="https://ubicomplab.cs.washington.edu/projects">
-                <img class="media=object" style="width:150px" src="img/julia.png">
+                <img class="media=object" style="width:200px" src="img/amplitude-time-trans.png">
               </a>
             </div>
             <div class="media-body">
-              <p>My Master's thesis was titled "<a href="papers/ElliotSaba_MastersThesis.pdf">A Fresh Look at Functional Connectivity</a>" and proposed a new application of pre-existing mathematics toward analysis of neuroimaging signals such as those captured by electro- and magnetoencephalographic (EEG/MEG) systems.  The work applied time-varying statistical signal processing methods toward characterizing functional connectivity in the brain of subjects performing a visual search task.
+              <p>My Master's thesis, titled "<a href="papers/ElliotSaba_MastersThesis.pdf">A Fresh Look at Functional Connectivity</a>", proposed a new application of pre-existing mathematics toward analysis of neuroimaging signals such as those captured by electro- and magnetoencephalographic (EEG/MEG) systems.  The work applied time-varying statistical signal processing methods toward characterizing functional connectivity in the brain of subjects performing a visual search task.  This work was done as a joint research project between the <a href="http://depts.washington.edu/labsn/">Laboratory for Auditory Brain Sciences and Neuroengineering</a> and the <a href="https://sites.google.com/a/uw.edu/isdl/">Interactive System Design Laboratory</a>, at the University of Washington.
             </div>
           </div>
 
@@ -143,6 +139,18 @@
               <a href="https://ubicomplab.cs.washington.edu/projects/HydroSense">
                 <img class="media=object" style="width:250px" src="img/hydrosense.png">
               </a>
+            </div>
+          </div>
+
+          <div class="media">
+            <h4>Project Heisenbug</h4>
+            <div class="media-left">
+              <a href="http://www.centrotherm.us.com/">
+                <img class="media=object" style="width:200px" src="img/amplitude-time-trans.png">
+              </a>
+            </div>
+            <div class="media-body">
+              <p>I was contracted to build a realtime data collection/analysis system for Centrotherm USA for usage in their chemical engineering research. The system's fanciful name notwithstanding, I designed and implemented it to control and read off of dozens of sensors simultaneously across a variety of modalities including SOLO sensors communicating via Modbus over TCP and interfacing with Gas Chromatography and Fourier Transform Infrared Spectroscopy instrumentation.  The sensor readings were streamed into a database and plotted, live, through an interactive web-based data exploration environment custom-built for this application.
             </div>
           </div>
         </div>
