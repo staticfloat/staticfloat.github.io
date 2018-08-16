@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <script type="text/javascript">
-      if( window.location.protocol != "https:" && window.location.hostname != "localhost" )
+      if( window.location.protocol != "file:" &&
+          window.location.protocol != "https:" &&
+          window.location.hostname != "localhost" ) {
         window.location.protocol = "https:";
+      }
     </script>
     <meta name="description" content="Elliot Saba, personal website">
     <meta name="author" content="Elliot Saba">
@@ -59,10 +62,10 @@
       <!-- Main component for a primary marketing message or call to action -->
       <div role="tabpanel" class="tab-pane active" id="_about">
         <div class="jumbotron">
-          <h1>About me</h1>
+          <h1>Welcome</h1>
           <div class="media">
             <div class="media-body">
-              <p>I am a Ph.D. student at the <a href="https://uw.edu">University of Washington</a>, studying Electrical Engineering, specifically Digital Signal Processing.  I specialize in signal-level analysis of systems both natural and artificial.  I also have experience in a number of related fields including low-level microcontroller programming, high performance computing, machine learning, web application development and realtime graphics/interactive simulation.</p>
+              <p>I am a senior research engineer at <a href="https://juliacomputing.com">Julia Computing</a>, where I design next-generation tools for the <a href="https://julialang.org">Julia</a> programming language.  I received my Ph.D. from the <a href="https://uw.edu">University of Washington</a> in Electrical Engineering, specializing in Digital Signal Processing.  I also have experience in a number of related fields including low-level microcontroller programming, electromagnetics and wireless communications, high performance computing, and machine learning.</p>
             </div>
             <div class="media-right">
               <img class="media=object" src="img/mugshot.png">
@@ -73,7 +76,7 @@
         <div class="panel panel-default panel-body bodytron">
           <p>I graduated from the University of Washington with a Bachelors of Science in Electrical Engineering in 2011, and continued on directly into the graduate program, earning my Masters degree in 2014 from <a href="https://www.ee.washington.edu/faculty/atlas/">Prof. Les Eugene Atlas</a> and <a href="https://faculty.washington.edu/akclee/">Prof. Adrian KC Lee</a>.  My masters thesis was titled "<a href="papers/ElliotSaba_MastersThesis.pdf">A Fresh Look at Functional Connectivity</a>" and proposed a new application of pre-existing mathematics toward analysis of neuroimaging signals such as those captured by electro- and magnetoencephalographic (EEG/MEG) systems.</p>
 
-          <p>I am currently a student in the <a href="https://ubicomplab.cs.washington.edu">Ubiquitous Computing Laboratory</a> under <a href="https://abstract.cs.washington.edu/~shwetak">Prof. Shwetak Patel</a>. My <a data-toggle="tab" href="#_projects">projects page</a> has current information on any work currently underway, whereas my <a href="papers/ElliotSaba_CV.pdf">curriculum vitae</a> has a more targeted selection of previous work to peruse.</p>
+          <p>In 2018 I graduated with my Ph.D. from the <a href="https://ubicomplab.cs.washington.edu">Ubiquitous Computing Laboratory</a> studying under <a href="https://abstract.cs.washington.edu/~shwetak">Prof. Shwetak Patel</a>.  My dissertation, titled "<a href="papers/ElliotSaba_Dissertation.pdf">Techniques for Cough Sound Analysis</a>" details my research into the application of deep learning to acoustic cough detection and classification.  My <a data-toggle="tab" href="#_projects">projects page</a> has current information on my various major projects both past and present, whereas my <a href="papers/ElliotSaba_CV.pdf">curriculum vitae</a> has a more targeted selection of previous work to peruse.</p>
         </div>
       </div>
 
@@ -83,7 +86,7 @@
           <div class="media">
             <h4>The <a href="https://julialang.org">Julia Language</a></h4>
             <div class="media-body">
-              <p>I have been a core developer on the Julia language project since 2013, a new programming language currently on the rise in the field of technical computing.  My contributions to the project include <a href="http://julialang.org/downloads/">release maintenance, testing and packaging</a>, design and implementation of the <a href="https://github.com/JuliaLang/Homebrew.jl">official OS X package binary deployment system</a>, development of packages critical to the Julia package ecosystem such as <a href="https://github.com/staticfloat/Nettle.jl">Nettle.jl</a> and <a href="https://github.com/staticfloat/SHA.jl">SHA.jl</a>, as well as innumerable bug fixes and bits of code scattered throughout the project and related efforts. </p>
+              <p>I have been a core developer on the <a href="https://julialang.org">Julia</a> language project since 2013, although I did not start working at <a href="https://juliacomputing.com">Julia Computing</a> until late 2018.  My contributions to the project include basic infrastructure and maintenance, the design and implementation of the <a href="https://github.com/JuliaLang/Homebrew.jl">official OS X binary package deployment system</a>, the design and development of the next generation cross-platform binary package <a href="https://github.com/JuliaPackaging/BinaryBuilder.jl">compilation</a> and <a href="https://github.com/JuliaPackaging/BinaryProvider.jl">deployment</a> systems, contributions to <a href="https://github.com/FluxML/Flux.jl">native Julia deep learning frameworks</a>, development of packages critical to the Julia package ecosystem such as <a href="https://github.com/staticfloat/Nettle.jl">Nettle.jl</a> and <a href="https://github.com/staticfloat/SHA.jl">SHA.jl</a>, as well as innumerable bug fixes and bits of code <a href="https://github.com/staticfloat">scattered throughout the project and related efforts</a>. </p>
             </div>
             <div class="media-right">
               <a href="https://julialang.org">
@@ -91,23 +94,38 @@
               </a>
             </div>
           </div>
+        </div>
+        
+        <div class="panel panel-default panel-body bodytron">
+          <h1>Past Projects</h1>
+          <div class="media">
+              <h4><a href="https://ubicomplab.cs.washington.edu/publications/coughsense/">CoughSense</a></h4>
+              <div class="media-body">
+                <p><a href="https://ubicomplab.cs.washington.edu/publications/wibreathe/">CoughSense</a> is an ongoing research project at the University of Washington Ubiquitous Computing Laboratory on pulmonary health sensing using mobile phones as mobile cough detection and classification devices.  This work is submitted for publication at IMWUT 2018, and can also be found in my Ph.D. dissertation titled <a href="papers/ElliotSaba_Dissertation.pdf">Techniques for Cough Sound Analysis</a>.  This work explores the interaction between signal processing domain-specific knowledge and learning systems' ability to extract information from arbitrary inputs, as well as the specific application of such systems to cough sounds.  The technology is currently part of pilot study programs deploying health sensing technologies into the homes of patients.</p>
+              </div>
+              <div class="media-right">
+                  <a href="https://ubicomplab.cs.washington.edu/publications/coughsense/">
+                    <img class="media=object" style="width:180px" src="img/coughsense.png">
+                  </a>
+              </div>
+            </div>
 
           <div class="media">
-            <h4><a href="https://ubicomplab.cs.washington.edu/projects/WiBreathe">WiBreathe</a></h4>
+            <h4><a href="https://ubicomplab.cs.washington.edu/publications/wibreathe/">WiBreathe</a></h4>
             <div class="media-left">
-              <a href="https://ubicomplab.cs.washington.edu/projects/WiBreathe">
+              <a href="https://ubicomplab.cs.washington.edu/publications/wibreathe/">
                 <img class="media=object" style="width:180px" src="img/wibreathe.png">
               </a>
             </div>
             <div class="media-body">
-              <p><a href="https://ubicomplab.cs.washington.edu/projects/WiBreathe">WiBreathe</a> is a research project at the University of Washington Ubiquitous Computing Laboratory on remote health sensing via a system that utilizes 2.4 GHz electromagnetic signals to determine patient vital statistics such as breathing rate. This work was published at <a href="https://www.percom.org/">PerCom</a> 2015 in a paper titled "<a href="papers/WiBreathe_PerCom2015.pdf">WiBreathe: Estimating Respiration Rate Using Wireless Signals in Natural Settings in the Home</a>".  My main contribution was in the design and implementation of signal processing algorithms to map the received wireless signals to breathing rates. We are now extending this work to utilize pre-existing signals and wireless infrastructure, which has given me reason to build an 802.11b software decoder from scratch.</p>
+              <p><a href="https://ubicomplab.cs.washington.edu/publications/wibreathe/">WiBreathe</a> is a research project at the University of Washington Ubiquitous Computing Laboratory on remote health sensing via a system that utilizes 2.4 GHz electromagnetic signals to determine patient vital statistics such as breathing rate. This work was published at <a href="https://www.percom.org/">PerCom</a> 2015 in a paper titled "<a href="papers/WiBreathe_PerCom2015.pdf">WiBreathe: Estimating Respiration Rate Using Wireless Signals in Natural Settings in the Home</a>".  My main contribution was in the design and implementation of signal processing algorithms to map the received wireless signals to breathing rates.  As a part of this work, we attempted to utilize pre-existing signals and wireless infrastructure, which gave me reason to build an 802.11b software decoder from scratch, something I honestly never thought I'd need to do.</p>
             </div>
           </div>
-
+  
           <div class="media">
             <h4><a href="https://ubicomplab.cs.washington.edu/projects/SpiroSmart">SpiroSmart</a></h4>
             <div class="media-body">
-              <p>SpiroSmart is a mobile phone based platform that allows for the analysis of common lung function measures (FEV1, FVC, PEF). By analyzing sound waves incident on the microphone of the mobile phone, we are capable of monitoring pulmonary ailments such as asthma, chronic obstructive pulmonary disease, and cystic fibrosis.  My contributions to this project include signal processing and machine learning algorithms to estimate air flow from users' lungs across a wide range of clinical situations. This work is currently undergoing international clinical trials in partnership with a number of medical institutions.</p>
+              <p>SpiroSmart is a mobile phone based platform that allows for the analysis of common lung function measures (FEV1, FVC, PEF). By analyzing sound waves incident on the microphone of the mobile phone, we are capable of monitoring pulmonary ailments such as asthma, chronic obstructive pulmonary disease, and cystic fibrosis.  My contributions to this project include signal processing and machine learning algorithms to estimate air flow from users' lungs across a wide range of clinical situations.  This work is currently undergoing international clinical trials in partnership with a number of medical institutions.</p>
             </div>
             <div class="media-right">
               <a href="https://ubicomplab.cs.washington.edu/projects/SpiroSmart">
@@ -115,13 +133,11 @@
               </a>
             </div>
           </div>
-        </div>
-        <div class="panel panel-default panel-body bodytron">
-          <h1>Past Projects</h1>
+
           <div class="media">
             <h4>Modeling Functional Connectivity in the brain</h4>
             <div class="media-left">
-              <a href="https://ubicomplab.cs.washington.edu/projects">
+              <a href="http://depts.washington.edu/labsn">
                 <img class="media=object" style="width:200px" src="img/amplitude-time.png">
               </a>
             </div>
@@ -158,7 +174,7 @@
 
       <div role="tabpanel" class="tab-pane" id="_contact">
         <div class="jumbotron">
-	<p>Email: sabae (at) uw (dot) edu (<a href="sabae.key.pub">GPG public key</a>, <a href="sabae_rsa.pub">SSH public key</a>)</p>
+	        <p>Email: sabae (at) uw (dot) edu (<a href="sabae.key.pub">GPG public key</a>, <a href="sabae_rsa.pub">SSH public key</a>)</p>
           <p>Leave a voicemail at +1 (206) 414-8216</p>
           <p>Find me on <a href="https://github.com/staticfloat">Github</a> or <a href="https://stackoverflow.com/users/230778/staticfloat">Stack Overflow</a>. </p>
           <p>Download my <a href="papers/ElliotSaba_CV.pdf">Curriculum Vitae</a>. </p>
